@@ -1,4 +1,4 @@
-To run this code just execut `npm i` and then `npm start`
+To run this code just execute `npm i` and then `npm start`
 The app will start on port 3000
 
 Endpoints: 

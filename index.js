@@ -7,6 +7,10 @@ app.use(bodyParser.json());
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
+
+/****************** Endpoints ******************/
+
+
 app.post("/courses", (req, res) => {
   if (req.body.dni && req.body.name) {
     const course = findCourseByName(req.body.name);
@@ -62,6 +66,7 @@ app.get("/list", (req, res) => {
   return res.status(200).json(list);
 });
 
+/****************** Helper functions ******************/
 const findStudentByDni = dni => students.find(e => e.dni === dni);
 
 const findCourseByName = name => courses.find(e => e.name === name);
